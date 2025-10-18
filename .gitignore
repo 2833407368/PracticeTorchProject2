@@ -415,7 +415,13 @@
 /hymenoptera_data/train/ants/imageNotFound.gif
 /hymenoptera_data/train/ants/kurokusa.jpg
 /hymenoptera_data/train/ants/MehdiabadiAnt2_600.jpg
-/dataset/cifar-100-python/meta
+/dataset/
+/DAT/
+/DL/
+/hymenoptera_data/
+/logs/
+/runs/
+/test/
 /.idea/misc.xml
 /.idea/modules.xml
 /hymenoptera_data/train/ants/Nepenthes_rafflesiana_ant.jpg
@@ -432,5 +438,6 @@
 /hymenoptera_data/train/ants/trap-jaw-ant-insect-bg.jpg
 /.idea/vcs.xml
 /hymenoptera_data/train/ants/VietnameseAntMimicSpider.jpg
-d a t a s e t /  
+d a t a s e t / 
+ 
  
