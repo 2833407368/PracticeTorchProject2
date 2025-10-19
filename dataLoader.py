@@ -7,7 +7,7 @@ dataset_transform = torchvision.transforms.Compose([
     torchvision.transforms.ToTensor()
 ])
 # train_set = torchvision.datasets.CIFAR10(root="./dataset",train=True, transform=dataset_transform)
-test_data = torchvision.datasets.CIFAR10(root="./dataset",train=False, transform=dataset_transform)
+test_data = torchvision.datasets.CIFAR10(root="./dataset",train=False, transform=dataset_transform, download=True)
 
 test_loader = DataLoader(test_data, batch_size=64,shuffle=False,num_workers=0,drop_last=False)
 img, target = test_data[0]
