@@ -15,14 +15,14 @@ test_data = torchvision.datasets.CIFAR10(root='./dataset', train=False, download
 print(f"train_data_size:{len(train_data)}")
 print(f"test_data_size:{len(test_data)}")
 
-# 数据加载器
+# 数据加载
 train_loader = DataLoader(train_data, batch_size=64, shuffle=True, drop_last=True)
 test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
 
 # 模型
 cj = Cj().to(device)
 
-# 损失函数 & 优化器
+# 损失函数  优化器
 loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(cj.parameters(), lr=0.0001)
 # optimizer = torch.optim.Adam(cj.parameters(), lr=0.0001)
@@ -33,7 +33,7 @@ epoch = 100
 for i in range(epoch):
     print(f"----- Epoch {i+1}/{epoch} -----")
 
-    # 训练模式
+    # 训练
     cj.train()
     for imgs, targets in train_loader:
         imgs, targets = imgs.to(device), targets.to(device)
@@ -50,7 +50,7 @@ for i in range(epoch):
             print(f"Train Step: {total_train_step}, Loss: {loss.item():.4f}")
             writer.add_scalar("Train/Loss", loss.item(), total_train_step)
 
-    # 测试模式
+    # 测试
     cj.eval()
     total_test_loss = 0.0
     total_accuracy = 0.0
